@@ -1,0 +1,11 @@
+https://swagger.io/docs/specification/basic-structure/
+https://editor.swagger.io/
+
+docker pull swaggerapi/swagger-editor
+
+docker run -d -p 8081:8080 swaggerapi/swagger-editor
+
+
+docker run -d -p 8081:8080 -v $(pwd):/tmp -e SWAGGER_FILE=/tmp/swagger1.yml swaggerapi/swagger-editor
+
+docker run -d -p 8081:8080 --network bridge -v $(pwd):/tmp -e SWAGGER_FILE=/tmp/swagger1.yml swaggerapi/swagger-editor
